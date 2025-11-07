@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo HTML5, CSS y JS</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="margin-sep">
+        <h1>Mi Página Web Principal</h1>
+    </header>
+
+    <section id="navegacion" class="margin-sep padding-style">
+        <h2>Enlaces de Interés</h2>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank">Buscador Google</a></li>
+            <li><a href="https://es.wikipedia.org" target="_blank">Wikipedia</a></li>
+            <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">Documentación HTML</a></li>
+            <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        </ul>
+    </section>
+
+    <section id="contenido" class="margin-sep padding-style">
+        <h2>Artículos Destacados</h2>
+        
+        <article id="articulo1" class="margin-sep padding-style fondo-color">
+            <h3>Artículo Uno</h3>
+            <p id="texto1"></p> 
+        </article>
+        
+        <article id="articulo2" class="margin-sep padding-style fondo-imagen">
+            <h3>Artículo Dos (Con Imagen de Fondo)</h3>
+            <p id="texto2"></p>
+        </article>
+    </section>
+    
+    <section id="catalogo-link" class="margin-sep">
+        <p>
+            Ver nuestro <a href="catalogo.html">Catálogo de Equipo de Cómputo</a> (Punto 5)
+        </p>
+    </section>
+
+    <footer class="margin-sep">
+        <p>&copy; 2025 Desarrollo Web - [Armenta Zamudio Mario Carlos]</p>
+    </footer>
+
+    <script>
+        
+        function generarTextoAleatorio() {
+            const textos = [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            ];
+            
+            return textos[Math.floor(Math.random() * textos.length)];
+        }
+
+        
+        document.getElementById('texto1').textContent = generarTextoAleatorio();
+        document.getElementById('texto2').textContent = generarTextoAleatorio();
+    </script>
+</body>
+</html>
